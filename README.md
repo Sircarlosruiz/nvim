@@ -33,3 +33,19 @@ Other package managers work as well; use whichever is standard for your system.
 
 Some commands work best from PowerShell. If you encounter issues, try running
 Neovim from `pwsh` instead of `cmd`.
+
+## Mason-managed tools
+
+This template uses [Mason](https://github.com/williamboman/mason.nvim) to
+automatically install additional CLI tools. The file
+`lua/plugins/example.lua` lists common utilities such as `shellcheck` and
+`shfmt` that Mason will download when needed. Binaries are fetched for your
+operating system and placed inside Mason's data directory.
+
+If you prefer manual installation or your environment does not allow Mason to
+download binaries, you can install these tools yourself:
+
+- **ShellCheck** – available from package managers or from
+  <https://github.com/koalaman/shellcheck/releases> for Linux, macOS and Windows
+- **shfmt** – distributed at <https://github.com/mvdan/sh/releases> with
+  downloads for all platforms
