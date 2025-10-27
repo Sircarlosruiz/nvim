@@ -69,6 +69,14 @@ return {
 
     -- ✅ reemplazo de on_attach / on_dynamic_capability con Snacks
     require("snacks.util").lsp.on(function(client, buffer)
+      if type(client) == "number" then
+        client = vim.lsp.get_client_by_id(client)
+      end
+
+      if not client then
+        return
+      end
+      buffer = buffer or 0
       -- inlay hints
       if
         opts.inlay_hints.enabled
