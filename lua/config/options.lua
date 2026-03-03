@@ -12,3 +12,5 @@ else
   -- Use the user's shell if defined, otherwise fall back to bash
   vim.opt.shell = os.getenv("SHELL") or "/bin/bash"
 end
+
+vim.env.PATH = vim.env.PATH .. ":/opt/mssql-tools18/bin"
