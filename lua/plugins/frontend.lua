@@ -14,8 +14,7 @@ return {
         -- Formatters
         "prettierd",
         "eslint_d",
-        -- Debugger
-        "js-debug-adapter",
+        -- Debugger (handled by mason-nvim-dap)
       })
     end,
   },
@@ -99,4 +98,3 @@ return {
     end,
   },
 }
-
