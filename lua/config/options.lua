@@ -3,6 +3,9 @@
 -- Add any additional options here
 vim.opt.winbar = "%=%m %f"
 
+vim.opt.fileformat = "unix"
+vim.opt.clipboard = "unnamedplus"
+
 -- Detect the operating system and configure the default shell
 local sysname = vim.loop.os_uname().sysname
 if sysname == "Windows_NT" then
