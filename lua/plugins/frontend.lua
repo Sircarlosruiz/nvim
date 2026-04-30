@@ -39,7 +39,7 @@ return {
       opts.formatters_by_ft = opts.formatters_by_ft or {}
       local js_like = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" }
       for _, ft in ipairs(js_like) do
-        opts.formatters_by_ft[ft] = { "prettierd", "eslint_d" }
+        opts.formatters_by_ft[ft] = { "prettierd" }
       end
       opts.formatters_by_ft["json"] = { "prettierd" }
       opts.formatters_by_ft["jsonc"] = { "prettierd" }
@@ -58,7 +58,7 @@ return {
     dependencies = { "mfussenegger/nvim-dap" },
     opts = {
       ensure_installed = { "js-debug-adapter" },
-      automatic_installation = true,
+      automatic_installation = false,
     },
   },
   {
