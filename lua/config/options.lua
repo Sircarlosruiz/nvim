@@ -17,3 +17,6 @@ else
 end
 
 vim.env.PATH = vim.env.PATH .. ":/opt/mssql-tools18/bin"
+
+-- Fix for Python provider ENOEXEC error
+vim.g.python3_host_prog = "/opt/anaconda3/bin/python3"

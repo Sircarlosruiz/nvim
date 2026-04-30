@@ -8,7 +8,6 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "pyright",
         "ruff",
-        "ruff-lsp",
         "black",
         "debugpy",
       })
@@ -31,7 +30,7 @@ return {
           },
         },
       })
-      opts.servers.ruff_lsp = {
+      opts.servers.ruff = {
         init_options = {
           settings = {
             args = {},
@@ -54,7 +53,6 @@ return {
   -- Virtual env / Conda selector (works with venv & conda envs)
   {
     "linux-cultist/venv-selector.nvim",
-    branch = "regexp",
     cmd = { "VenvSelect", "VenvSelectCached" },
     opts = {
       name = { "venv", ".venv", "env", ".conda", "conda" },
