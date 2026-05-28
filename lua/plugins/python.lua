@@ -33,10 +33,14 @@ return {
   -- Virtual env / Conda selector (works with venv & conda envs)
   {
     "linux-cultist/venv-selector.nvim",
-    cmd = { "VenvSelect", "VenvSelectCached" },
+    dependencies = {
+      { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+    },
+    ft = "python",
+    cmd = { "VenvSelect", "VenvSelectCache" },
     opts = {
-      name = { "venv", ".venv", "env", ".conda", "conda" },
-      poetry_path = "poetry",
+      options = {},
+      search = {},
     },
     keys = {
       { "<leader>cv", ":VenvSelect<CR>", desc = "Select Virtualenv/Conda" },
