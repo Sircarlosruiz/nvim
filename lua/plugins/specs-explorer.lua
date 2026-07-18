@@ -1,6 +1,6 @@
 return {
   "specs-explorer",
-  dir = "~/dev/specsmd.nvim/",
+  dir = "~/dev/specs.md/nvim-extension/",
   dependencies = {
     "MunifTanjim/nui.nvim",
     "nvim-tree/nvim-web-devicons",
